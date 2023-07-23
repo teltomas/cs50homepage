@@ -106,12 +106,12 @@ function wordlePlay (input, wSelected, attempts) {
 // Receive and process input word
 document.querySelector('form'),addEventListener('submit', function(event) {
 
+  event.preventDefault();
   let input = document.querySelector('#input').value;
 
   // Cancel process if there was no input
   if (input.length == 0)
   {
-    event.preventDefault();
     return 1;
   }
 
@@ -124,7 +124,6 @@ document.querySelector('form'),addEventListener('submit', function(event) {
       document.querySelector('#validation').innerHTML = '&nbsp';
       }, 3000);
 
-      event.preventDefault();
       return 1;
   }
   else
@@ -155,7 +154,6 @@ document.querySelector('form'),addEventListener('submit', function(event) {
     document.querySelector('#box').style.backgroundColor = '#e06666';
     document.querySelector('#box').style.boxShadow =  '0px 7px 7px -2px #990000';
     document.querySelector('#box').innerHTML = "<p>Sorry... Out of tries. The word was "+wSelected+". Better luck next time.</p>";
-    event.preventDefault();
     return 0;
   }
 
@@ -168,10 +166,8 @@ document.querySelector('form'),addEventListener('submit', function(event) {
     document.querySelector('#box').style.boxShadow =  '0px 7px 7px -2px #214621';
     document.querySelector('#box').innerHTML = "<p>You have got it in "+attempts+" attempts! Congratulations!</p>";
 
-    event.preventDefault();
     return 0;
   }
 
-  event.preventDefault();
   return 0;
 });
