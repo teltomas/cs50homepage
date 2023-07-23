@@ -144,6 +144,9 @@ document.querySelector('form'),addEventListener('submit', function(event) {
     won = wordlePlay (input, wSelected, attempts);
   }
 
+  // Clear the form after attempt
+  document.getElementById("input").value = "";
+
   if (attempts == 6)
   {
     // end the game because all attempts were used
@@ -151,7 +154,7 @@ document.querySelector('form'),addEventListener('submit', function(event) {
     document.querySelector('#box').style.visibility = 'visible';
     document.querySelector('#box').style.backgroundColor = '#e06666';
     document.querySelector('#box').style.boxShadow =  '0px 7px 7px -2px #990000';
-    document.querySelector('#box').innerHTML = "<p>Sorry... Out of tries. Better luck next time.</p>";
+    document.querySelector('#box').innerHTML = "<p>Sorry... Out of tries. The word was "+wSelected+". Better luck next time.</p>";
     event.preventDefault();
     return 0;
   }
@@ -163,7 +166,7 @@ document.querySelector('form'),addEventListener('submit', function(event) {
     document.querySelector('#box').style.visibility = 'visible';
     document.querySelector('#box').style.backgroundColor = '#224f22';
     document.querySelector('#box').style.boxShadow =  '0px 7px 7px -2px #214621';
-    document.querySelector('#box').innerHTML = "<p>You have got it! Congratulations!</p>";
+    document.querySelector('#box').innerHTML = "<p>You have got it in "+attempts+" attempts! Congratulations!</p>";
 
     event.preventDefault();
     return 0;

@@ -64,7 +64,7 @@ table {
 
 .game {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 10px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     border-spacing: 5px;
@@ -87,7 +87,7 @@ td {
 
 footer {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
 
