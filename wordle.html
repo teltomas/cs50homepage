@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link href="styles.css" rel="stylesheet">
+        <script>
+            let attempts = 0;
+        </script>
+        <script src="js.js"></script>
+        <title>My Webpage - Wordle</title>
+
+    </head>
+    <body>
+        <section>
+            <table>
+                <tr>
+                    <td>W</td>
+                    <td style="background-color: #EAB05E; box-shadow: 0px 7px 7px -2px #a97935;">O</td>
+                    <td style="background-color: #224f22; box-shadow: 0px 7px 7px -2px #214621;">R</td>
+                    <td style="background-color: #EAB05E; box-shadow: 0px 7px 7px -2px #a97935;">D</td>
+                    <td style="background-color: #224f22; box-shadow: 0px 7px 7px -2px #214621;">L</td>
+                    <td>E</td>
+                </tr>
+            </table>
+
+            <h3>Guess the 5 letter word. You have 6 attempts.</h3>
+
+            <table class="game">
+                <tr id="line1" class="inputs">
+                    <td id="cell11"></td>
+                    <td id="cell12"></td>
+                    <td id="cell13"></td>
+                    <td id="cell14"></td>
+                    <td id="cell15"></td>
+                </tr>
+                <tr id="line2" class="inputs">
+                    <td id="cell21"></td>
+                    <td id="cell22"></td>
+                    <td id="cell23"></td>
+                    <td id="cell24"></td>
+                    <td id="cell25"></td>
+                </tr>
+                <tr id="line3" class="inputs">
+                    <td id="cell31"></td>
+                    <td id="cell32"></td>
+                    <td id="cell33"></td>
+                    <td id="cell34"></td>
+                    <td id="cell35"></td>
+                </tr>
+                <tr id="line4" class="inputs">
+                    <td id="cell41"></td>
+                    <td id="cell42"></td>
+                    <td id="cell43"></td>
+                    <td id="cell44"></td>
+                    <td id="cell45"></td>
+                </tr>
+                <tr id="line5" class="inputs">
+                    <td id="cell51"></td>
+                    <td id="cell52"></td>
+                    <td id="cell53"></td>
+                    <td id="cell54"></td>
+                    <td id="cell55"></td>
+                </tr>
+                <tr id="line6" class="inputs">
+                    <td id="cell61"></td>
+                    <td id="cell62"></td>
+                    <td id="cell63"></td>
+                    <td id="cell64"></td>
+                    <td id="cell65"></td>
+                </tr>
+            </table>
+        </section>
+        <footer>
+            <form>
+                <input autocomplete="off" id="input" placeholder="Your 5 letter word" type="text">
+                <button class="press" id="launch" type="submit">Check Word</button>
+                <p id="validation">&nbsp</p>
+
+            </form>
+
+            <div id="box">
+
+
+
+            </div>
+
+            <br/>
+            <a href="javascript:window.location.reload(true)" class="press" id="reset">Reset Game</a>
+            <br/><br/><br/>
+            <a class="press" href="index.html">Return to Main Page</a>
+
+        </footer>
+
+    </body>
+</html>

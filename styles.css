@@ -1,0 +1,156 @@
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+header {
+    margin-top: 25px;
+}
+
+.accordion-button {
+    border: 0px;
+}
+
+.accordion-button:hover {
+    background-color: #ebf5ff;
+}
+
+
+.accordion-button:focus {
+    box-shadow: 0px;
+}
+
+.avatar {
+    border-radius: 50%;
+    margin: 50px;
+    border: 0px;
+    box-shadow: 0px 5px 7px #676767;
+    padding: 0px;
+}
+
+main {
+    padding-top: 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+table {
+    box-sizing: content-box;
+    margin: auto;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+
+.game {
+    margin: auto;
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-spacing: 5px;
+}
+
+.inputs {
+    visibility: hidden;
+}
+
+
+td {
+    text-align: center;
+    border-radius: 10px;
+    height: 50px;
+    width: 50px;
+    background-color: #0b5394;
+    box-shadow: 0px 7px 7px -2px #084174;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.tblink:hover {
+    opacity: 75%;
+}
+
+a:link {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+
+a:visited {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+
+input {
+    border-radius: 10px;
+    padding: 0.5em;
+    border: 3px solid #0b5394;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    box-shadow: 0px 7px 7px -2px #084174;
+  }
+
+input:focus {
+    border: 3px solid #bde0ff;
+
+  }
+
+.press {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background-color: #0b5394;
+    border-radius: 10px;
+    border: 0px;
+    padding: 0.8em;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    box-shadow: 0px 7px 7px -2px #084174;
+  }
+
+.press:hover {
+    background-color: #78bfff;
+}
+
+.press:active {
+    background-color: #0d3c67;
+}
+
+#box {
+    visibility: hidden;
+    margin: auto;
+    margin-bottom: 1em;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 10px;
+    width: 15em;
+    background-color: #0b5394;
+    box-shadow: 0px 7px 7px -2px #084174;
+}
