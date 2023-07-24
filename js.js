@@ -48,9 +48,7 @@ function wordleInitiate() {
 function wordlePlay (input, wSelected, attempts) {
 
   // activate the attempt'th row in the css
-
   document.querySelector('#line' + attempts).style.display = "table-row";
-
 
   // if word matches
   if (input == wSelected)
@@ -107,7 +105,6 @@ function wordlePlay (input, wSelected, attempts) {
 document.querySelector('form'),addEventListener('submit', function(event) {
 
   let input = document.querySelector('#input').value;
-
 
   // Cancel process if there was no input
   if (input.length == 0)
