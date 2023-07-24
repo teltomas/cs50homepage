@@ -49,7 +49,7 @@ function wordlePlay (input, wSelected, attempts) {
 
   // activate the attempt'th row in the css
 
-  document.querySelector('#line' + attempts).style.visibility = "visible";
+  document.querySelector('#line' + attempts).style.display = "table-row";
 
 
   // if word matches
@@ -62,7 +62,7 @@ function wordlePlay (input, wSelected, attempts) {
       document.querySelector('#cell'+attempts+(i+1)).innerHTML = input[i];
       document.querySelector('#cell'+attempts+(i+1)).style.backgroundColor = "#224f22";
       document.querySelector('#cell'+attempts+(i+1)).style.boxShadow = "0px 7px 7px -2px #214621";
-    }
+     }
 
     return true;
 
@@ -106,12 +106,13 @@ function wordlePlay (input, wSelected, attempts) {
 // Receive and process input word
 document.querySelector('form'),addEventListener('submit', function(event) {
 
-  event.preventDefault();
   let input = document.querySelector('#input').value;
+
 
   // Cancel process if there was no input
   if (input.length == 0)
   {
+    event.preventDefault();
     return 1;
   }
 
@@ -124,6 +125,7 @@ document.querySelector('form'),addEventListener('submit', function(event) {
       document.querySelector('#validation').innerHTML = '&nbsp';
       }, 3000);
 
+      event.preventDefault();
       return 1;
   }
   else
@@ -143,17 +145,17 @@ document.querySelector('form'),addEventListener('submit', function(event) {
     won = wordlePlay (input, wSelected, attempts);
   }
 
-  // Clear the form after attempt
   document.getElementById("input").value = "";
 
-  if (attempts == 6)
+  if (attempts == 6 && won == false)
   {
     // end the game because all attempts were used
     document.querySelector('#launch').disabled = true;
-    document.querySelector('#box').style.visibility = 'visible';
+    document.querySelector('#box').style.display = 'block';
     document.querySelector('#box').style.backgroundColor = '#e06666';
     document.querySelector('#box').style.boxShadow =  '0px 7px 7px -2px #990000';
     document.querySelector('#box').innerHTML = "<p>Sorry... Out of tries. The word was "+wSelected+". Better luck next time.</p>";
+    event.preventDefault();
     return 0;
   }
 
@@ -161,13 +163,15 @@ document.querySelector('form'),addEventListener('submit', function(event) {
   {
     // end the game with victory
     document.querySelector('#launch').disabled = true;
-    document.querySelector('#box').style.visibility = 'visible';
+    document.querySelector('#box').style.display = 'block';
     document.querySelector('#box').style.backgroundColor = '#224f22';
     document.querySelector('#box').style.boxShadow =  '0px 7px 7px -2px #214621';
     document.querySelector('#box').innerHTML = "<p>You have got it in "+attempts+" attempts! Congratulations!</p>";
 
+    event.preventDefault();
     return 0;
   }
 
+  event.preventDefault();
   return 0;
 });

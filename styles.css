@@ -71,7 +71,7 @@ table {
 }
 
 .inputs {
-    visibility: hidden;
+    display: none;
 }
 
 
@@ -144,7 +144,7 @@ input:focus {
 }
 
 #box {
-    visibility: hidden;
+    display: none;
     margin: auto;
     margin-bottom: 1em;
     text-align: center;
